@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1492980925 source:/home/dani/Desktop/TP_2_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+
+1492825873 /home/dani/Desktop/TP_2_Cascara/funciones.h
+
+1492980655 source:/home/dani/Desktop/TP_2_Cascara/Funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
