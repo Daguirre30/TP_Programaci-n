@@ -73,8 +73,8 @@ void bajaPersona (Epersona persona[], int tam)
 
 				if(respuesta == 's')
 				{
-                    printf("La persona a sido eliminada correctamente");
-                    system("pause");
+					printf("La persona a sido eliminada correctamente");
+					system("pause");
 					persona[i].estado = 0;
 				}
 				else
@@ -85,17 +85,11 @@ void bajaPersona (Epersona persona[], int tam)
 				flagEncontro=1;
 				break;
 			}
-
-
 		}
 	}
 	if(flagEncontro==0)
     {
-
-        printf("La persona no existe!!!\n");
-
-
-
+      printf("La persona no existe!!!\n");
     }
 }
 
