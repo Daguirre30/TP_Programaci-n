@@ -35,8 +35,13 @@ int buscarPorDni(Epersona lista[], int dni);
 
 void altaPersona (Epersona persona[], int);
 void bajaPersona (Epersona persona[], int);
-void imprimirPersonas(Epersona[], int);
-void graficarPersona (Epersona[], int);
+void imprimirPersonas(Epersona persona[], int);
+void graficarPersona (Epersona persona[], int);
+int validarNumero();
+int validarCaracter();
+
+
+
 
 
 

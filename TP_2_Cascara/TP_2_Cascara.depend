@@ -13,3 +13,17 @@
 	<string.h>
 	"funciones.h"
 
+1493081563 source:d:\daniel lugo\tp_programaci-n-master\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1493082053 d:\daniel lugo\tp_programaci-n-master\tp_2_cascara\funciones.h
+
+1493080946 source:d:\daniel lugo\tp_programaci-n-master\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+
