@@ -4,41 +4,23 @@
 typedef struct {
 
     char nombre[50];
-    int edad;
+    char edad[4];
     int estado;
-    int dni;
+    char dni[9];
 
 }Epersona;
-
-/**
- * Obtiene el primer indice libre del array.
- * @param lista el array se pasa como parametro.
- * @return el primer indice disponible
- */
-int obtenerEspacioLibre(Epersona lista[]);
-
-/**
- * Obtiene el indice que coincide con el dni pasado por parametro.
- * @param lista el array se pasa como parametro.
- * @param dni el dni a ser buscado en el array.
- * @return el indice en donde se encuentra el elemento que coincide con el parametro dni
- */
-int buscarPorDni(Epersona lista[], int dni);
-
-/**
- * Da de alta la persona
- * @param lista el array se pasa como parametro.
- * @param dni el dni a ser buscado en el array.
- * @return el indice en donde se encuentra el elemento que coincide con el parametro dni
- */
 
 
 void altaPersona (Epersona persona[], int);
 void bajaPersona (Epersona persona[], int);
 void imprimirPersonas(Epersona persona[], int);
 void graficarPersona (Epersona persona[], int);
-int validarNumero();
-int validarCaracter();
+int ValidarNumero(char str[]);
+int ValidarLetra(char str[]);
+int validarUnicidad(char str[]);
+
+
+
 
 
 
