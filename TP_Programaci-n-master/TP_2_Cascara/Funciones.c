@@ -126,26 +126,21 @@ void bajaPersona(Epersona persona[], int cantidad)
        if(auxiliar == atoi(persona[i].dni)&& (persona[i].estado==1))
             {
 
-                flagEncontro == 1;
+                
                 printf("%s\t%s\t%s\n",persona[i].dni, persona[i].nombre, persona[i].edad);
                 printf("Estas seguro de eliminar este dato s/n\n");
                 scanf("%s",&respuesta);
                 if(respuesta == 's')
                 {
                     persona[i].estado = 0;
-					printf("Se ha eliminado correctamente\n");
-					break;
+		    printf("Se ha eliminado correctamente\n");
+					
                 }
-                while(respuesta != 'n')
-                {
-                    printf("error, ingrese la opcion correcta s/n\n");
-                    scanf("%s",&respuesta);
-
-                }
-                if(respuesta == 'n')
+               if(respuesta == 'n')
                 {
                  printf("Accion cancelada por el usuario\n");
                 }
+	       flagEncontro = 1;
                 break;
             }
     }
