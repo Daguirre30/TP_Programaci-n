@@ -26,6 +26,7 @@ void altaPersona(Epersona persona[], int cantidad)
         if(persona[i].estado == 0) // si esta desocupada esa posicion
         {
             printf("Ingrese DNI\n");
+            getchar();
             fflush(stdin);
             gets(persona[i].dni);
             while(strlen(persona[i].dni)>=9)
@@ -92,16 +93,15 @@ void altaPersona(Epersona persona[], int cantidad)
     {
         printf("No hay espacio suficiente\n");
     }
-
+system("clear");
 }
-
-
 
 
 // funcion que da de baja la persona
 
 void bajaPersona(Epersona persona[], int cantidad)
 {
+    system("clear");
 
     int flagEncontro =0;
     int i;
@@ -109,73 +109,69 @@ void bajaPersona(Epersona persona[], int cantidad)
     char respuesta;
     printf("Ingrese DNI\n");
     scanf("%d",&auxiliar);
+    system("clear");
 
     for(i=0; i<cantidad; i++)
     {
-        if(persona[i].estado==1)
-        {
-            if(auxiliar == atoi(persona[i].dni))
+       if(auxiliar == atoi(persona[i].dni)&& (persona[i].estado==1))
             {
+
                 flagEncontro == 1;
-                printf("DNI\tNombre\tEdad\n");
-                fflush(stdin);
                 printf("%s\t%s\t%s\n",persona[i].dni, persona[i].nombre, persona[i].edad);
                 printf("Estas seguro de eliminar este dato s/n\n");
-                scanf("%c",&respuesta);
+                scanf("%s",&respuesta);
                 if(respuesta == 's')
                 {
                     persona[i].estado = 0;
+					printf("Se ha eliminado correctamente\n");
+					break;
                 }
-                else
+                while(respuesta != 'n')
                 {
-                    printf("Accion cancelada por el usuario\n");
+                    printf("error, ingrese la opcion correcta s/n\n");
+                    scanf("%s",&respuesta);
+
                 }
-
-
+                if(respuesta == 'n')
+                {
+                 printf("Accion cancelada por el usuario\n");
+                }
                 break;
             }
-        }
-    if(flagEncontro == 0)
-    {
-
-        printf("El dato no existe\n");
-
     }
-
-    }
-
+    if(flagEncontro ==0)
+    printf("El DNI no existe\n");
 
 
 }
 
 // imprimir las personas ordenadas por Nombre o por DNI
-/*
+
 void imprimirPersonas(Epersona persona[], int cantidad)
 {
-
     system("clear");
     Epersona personaAux;
     int i, j;
-    printf("DNI\t\tNombre\t\tEdad");
-    fflush(stdin);
     for(i=0; i<cantidad-1; i++)
     {
-        for(j=i+1; j<cantidad; j++){ fflush(stdin);
-               if(strcmp(persona[i].nombre, persona[j].nombre) > 0){
+        for(j=i+1; j<cantidad; j++)
+        {
+            if(strcmp(persona[i].nombre, persona[j].nombre) > 0)
+            {
                 personaAux = persona[i];
                 persona[i] = persona[j];
                 persona[j] =  personaAux;
             }
-            else{
-            fflush(stdin);
-                    if(strcmp(persona[i].nombre, persona[j].nombre) ==0 ){
-                    if(persona[i].dni > persona[j].dni){
-                        personaAux = persona[i];
-                        persona[i] = persona[j];
-                        persona[j] =  personaAux;
-                    }
+            if(strcmp(persona[i].nombre, persona[j].nombre) ==0 )
+            {
+                if(persona[i].dni > persona[j].dni)
+                {
+                    personaAux = persona[i];
+                    persona[i] = persona[j];
+                    persona[j] =  personaAux;
                 }
             }
+
         }
 
     }
@@ -184,9 +180,7 @@ void imprimirPersonas(Epersona persona[], int cantidad)
     {
         if(persona[i].estado == 1)
         {
-
-
-          printf("%s\t%s\t%s\n",persona[i].dni,persona[i].nombre,persona[i].edad);
+            printf("%s\t%s\t%s\n",persona[i].dni,persona[i].nombre,persona[i].edad);
         }
     }
 
@@ -197,7 +191,6 @@ void imprimirPersonas(Epersona persona[], int cantidad)
 void graficarPersona(Epersona persona[], int cantidad)
 {
 
-    system("clear");
     int contadorHasta18 =0;
     int contadorDe19a35=0;
     int contadorMayor35=0;
@@ -222,20 +215,20 @@ void graficarPersona(Epersona persona[], int cantidad)
     for(i=mayor; i>cantidad; i--)
     {
         printf("%02d|",i);
-        if(persona[i].edad <=18)
+        if(atoi(persona[i].edad <=18))
         {
             printf("*");
             contadorHasta18++;
         }
         else
         {
-            if(persona[i].edad >=19 || persona[i].edad <=35)
+            if(atoi(persona[i].edad >=19) && atoi(persona[i].edad <=35))
             {
                 printf("\t*");
                 contadorDe19a35++;
                 flag=1;
             }
-            if(persona[i].edad >=35)
+            if(atoi(persona[i].edad >=35))
             {
                 if(flag==1)
                 {
@@ -256,7 +249,7 @@ void graficarPersona(Epersona persona[], int cantidad)
     printf("\n   %d\t%d\t%d", contadorHasta18, contadorDe19a35, contadorMayor35);
 
 
-}*/
+}
 //validar Numeros
 int ValidarNumero(char str[])
 {
@@ -289,7 +282,7 @@ ValidarLetra(char str[])
 
 }
 
-//funcion que inicializa el Array
+//funcion que inicializa los estados en 0
 void inicilizarArray(Epersona personas[], int cantidad)
 {
     int i;

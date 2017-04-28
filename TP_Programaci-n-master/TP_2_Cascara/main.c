@@ -18,7 +18,7 @@ int main()
     while(seguir=='s')
     {
 
-        printf("\n1- Agregar persona\n");
+        printf("1- Agregar persona\n");
         printf("2- Borrar persona\n");
         printf("3- Imprimir lista ordenada por  nombre\n");
         printf("4- Imprimir grafico de edades\n");
@@ -26,7 +26,7 @@ int main()
         scanf("%d",&opcion);
     while(opcion <=0 || opcion >=6)
     {
-        printf("\nError, seleccione opciones entre el 1 y el 5 \n");
+        printf("Error, seleccione opciones entre el 1 y el 5 \n");
         printf("1- Agregar persona\n");
         printf("2- Borrar persona\n");
         printf("3- Imprimir lista ordenada por  nombre\n");
@@ -45,12 +45,10 @@ int main()
             bajaPersona(persona, cantidad);
                 break;
             case 3:
-//                imprimirPersonas(persona, cantidad);
-
+            imprimirPersonas(persona, cantidad);
                 break;
             case 4:
-  //              graficarPersona(persona, cantidad);
-
+            graficarPersona(persona, cantidad);
                 break;
             case 5:
                 seguir = 'n';

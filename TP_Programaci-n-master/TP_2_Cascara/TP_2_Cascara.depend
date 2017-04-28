@@ -15,7 +15,7 @@
 	<string.h>
 	"funciones.h"
 
-1493128033 .h"
+1493223264 .h"
 
 1493081563 source:d:\daniel lugo\tp_programaci-n-master\tp_2_cascara\funciones.c
 	<stdio.h>
@@ -57,6 +57,22 @@
 1493162458 /home/dani/Desktop/TP_Programaci-n-master/TP_2_Cascara/funciones.h
 
 1493223264 source:/home/dani/Desktop/TP_Programaci-n-master/TP_2_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+
+1493346535 source:/home/dani/Desktop/TP_Programaci-n-master/TP_2_Cascara/Funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1493344477 /home/dani/Desktop/TP_Programaci-n-master/TP_2_Cascara/funciones.h
+
+1493343422 source:/home/dani/Desktop/TP_Programaci-n-master/TP_2_Cascara/main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
