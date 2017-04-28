@@ -7,7 +7,12 @@
 
 
 
-
+/** \brief función para dar de alta a una persona 
+  * \param1 recibe un array de la estructura persona
+  * \param2 recibe la cantidad definida
+  * \return void
+  *
+  */
 
 //funcion para dar de alta una persona
 
@@ -96,7 +101,12 @@ void altaPersona(Epersona persona[], int cantidad)
 system("clear");
 }
 
-
+/** \brief función para dar de baja a una persona 
+  * \param1 recibe un array de la estructura persona
+  * \param2 recibe la cantidad definida
+  * \return void
+  *
+  */
 // funcion que da de baja la persona
 
 void bajaPersona(Epersona persona[], int cantidad)
@@ -145,6 +155,12 @@ void bajaPersona(Epersona persona[], int cantidad)
 
 }
 
+/** \brief función para imprimir lista ordenada por nombres de las personas 
+  * \param1 recibe un array de la estructura persona
+  * \param2 recibe la cantidad definida
+  * \return void
+  *
+  */
 // imprimir las personas ordenadas por Nombre o por DNI
 
 void imprimirPersonas(Epersona persona[], int cantidad)
@@ -186,6 +202,14 @@ void imprimirPersonas(Epersona persona[], int cantidad)
 
 }
 
+/** \brief función para mostrar graficamente la cantidad de personas
+	ordenadas por edades, (hasta 18 años, entre 19 y 35 años y 
+	mayor a 35
+  * \param1 recibe un array de la estructura persona
+  * \param2 recibe la cantidad definida
+  * \return void
+  *
+  */
 //imprimir el grafico de barras separados por edades
 
 void graficarPersona(Epersona persona[], int cantidad)
@@ -250,6 +274,12 @@ void graficarPersona(Epersona persona[], int cantidad)
 
 
 }
+
+/** \brief función para validar que lo ingresado sean numeros 
+  * \param1 recibe un array de char
+  * \return true o false (1 o 0)
+  *
+  */
 //validar Numeros
 int ValidarNumero(char str[])
 {
@@ -266,6 +296,12 @@ int ValidarNumero(char str[])
     return 1;
 }
 
+/** \brief función para validar que lo ingresado sea letras 
+  * \param1 recibe un array de char
+  * \return true o false (1 o 0)
+  *
+  */
+//Validar letras
 ValidarLetra(char str[])
 {
     int i=0;
@@ -282,6 +318,12 @@ ValidarLetra(char str[])
 
 }
 
+/** \brief función que inicializa los estados en 0 
+  * \param1 recibe un array de la estructura persona
+  * \param2 recibe la cantidad definida
+  * \return void
+  *
+  */
 //funcion que inicializa los estados en 0
 void inicilizarArray(Epersona personas[], int cantidad)
 {
