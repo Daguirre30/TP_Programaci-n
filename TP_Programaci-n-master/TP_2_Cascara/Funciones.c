@@ -231,7 +231,7 @@ void graficarPersona(Epersona persona[], int cantidad)
         }
     }
 
-    for(i=mayor; i>cantidad; i--)
+    for(i=0; i<cantidad; i++)
     {
         printf("%02d|",i);
         if(atoi(persona[i].edad <=18))
