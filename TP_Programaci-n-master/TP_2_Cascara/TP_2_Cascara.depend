@@ -79,3 +79,19 @@
 	<string.h>
 	"funciones.h"
 
+1493424831 source:/home/dani/Desktop/TP_Programacion2-master/TP_Programaci-n-master/TP_2_Cascara/Funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1493421067 /home/dani/Desktop/TP_Programacion2-master/TP_Programaci-n-master/TP_2_Cascara/funciones.h
+
+1493424854 source:/home/dani/Desktop/TP_Programacion2-master/TP_Programaci-n-master/TP_2_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+

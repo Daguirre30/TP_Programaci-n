@@ -7,7 +7,7 @@
 
 
 
-/** \brief función para dar de alta a una persona 
+/** \brief función para dar de alta a una persona
   * \param1 recibe un array de la estructura persona
   * \param2 recibe la cantidad definida
   * \return void
@@ -18,6 +18,7 @@
 
 void altaPersona(Epersona persona[], int cantidad)
 {
+    system("clear");
     int flagEncontro=0;
     int i;
     int contadorHasta18=0;
@@ -98,10 +99,10 @@ void altaPersona(Epersona persona[], int cantidad)
     {
         printf("No hay espacio suficiente\n");
     }
-system("clear");
+
 }
 
-/** \brief función para dar de baja a una persona 
+/** \brief función para dar de baja a una persona
   * \param1 recibe un array de la estructura persona
   * \param2 recibe la cantidad definida
   * \return void
@@ -124,24 +125,24 @@ void bajaPersona(Epersona persona[], int cantidad)
     for(i=0; i<cantidad; i++)
     {
        if(auxiliar == atoi(persona[i].dni)&& (persona[i].estado==1))
+        {
+            printf("DNI   \tnombre\tedad\n");
+            printf("%s\t%s\t%s\n",persona[i].dni, persona[i].nombre, persona[i].edad);
+            printf("Estas seguro de eliminar este dato s/n\n");
+            scanf("%s",&respuesta);
+            system("clear");
+            if(respuesta == 's')
             {
+                persona[i].estado = 0;
+                printf("Se ha eliminado correctamente\n");
 
-                
-                printf("%s\t%s\t%s\n",persona[i].dni, persona[i].nombre, persona[i].edad);
-                printf("Estas seguro de eliminar este dato s/n\n");
-                scanf("%s",&respuesta);
-                if(respuesta == 's')
-                {
-                    persona[i].estado = 0;
-		    printf("Se ha eliminado correctamente\n");
-					
-                }
-               if(respuesta == 'n')
-                {
-                 printf("Accion cancelada por el usuario\n");
-                }
-	       flagEncontro = 1;
-                break;
+            }
+            if(respuesta == 'n')
+            {
+             printf("Accion cancelada por el usuario\n");
+            }
+            flagEncontro = 1;
+            break;
             }
     }
     if(flagEncontro ==0)
@@ -150,7 +151,7 @@ void bajaPersona(Epersona persona[], int cantidad)
 
 }
 
-/** \brief función para imprimir lista ordenada por nombres de las personas 
+/** \brief función para imprimir lista ordenada por nombres de las personas
   * \param1 recibe un array de la estructura persona
   * \param2 recibe la cantidad definida
   * \return void
@@ -191,6 +192,7 @@ void imprimirPersonas(Epersona persona[], int cantidad)
     {
         if(persona[i].estado == 1)
         {
+            printf("DNI   \tnombre\tedad\n");
             printf("%s\t%s\t%s\n",persona[i].dni,persona[i].nombre,persona[i].edad);
         }
     }
@@ -198,7 +200,7 @@ void imprimirPersonas(Epersona persona[], int cantidad)
 }
 
 /** \brief función para mostrar graficamente la cantidad de personas
-	ordenadas por edades, (hasta 18 años, entre 19 y 35 años y 
+	ordenadas por edades, (hasta 18 años, entre 19 y 35 años y
 	mayor a 35
   * \param1 recibe un array de la estructura persona
   * \param2 recibe la cantidad definida
@@ -207,7 +209,7 @@ void imprimirPersonas(Epersona persona[], int cantidad)
   */
 //imprimir el grafico de barras separados por edades
 
-void graficarPersona(Epersona persona[], int cantidad)
+/*void graficarPersona(Epersona persona[], int cantidad)
 {
 
     int contadorHasta18 =0;
@@ -216,6 +218,7 @@ void graficarPersona(Epersona persona[], int cantidad)
     int i;
     int flag=0;
     int mayor;
+    int auxiliar;
 
     if(contadorHasta18 >= contadorDe19a35 && contadorHasta18 >= contadorMayor35)
     {
@@ -234,7 +237,7 @@ void graficarPersona(Epersona persona[], int cantidad)
     for(i=0; i<cantidad; i++)
     {
         printf("%02d|",i);
-        if(atoi(persona[i].edad <=18))
+        if(atoi(persona[i].edad) <=18)
         {
             printf("*");
             contadorHasta18++;
@@ -247,7 +250,7 @@ void graficarPersona(Epersona persona[], int cantidad)
                 contadorDe19a35++;
                 flag=1;
             }
-            if(atoi(persona[i].edad >=35))
+            if(atoi(persona[i].edad) >=35)
             {
                 if(flag==1)
                 {
@@ -268,9 +271,9 @@ void graficarPersona(Epersona persona[], int cantidad)
     printf("\n   %d\t%d\t%d", contadorHasta18, contadorDe19a35, contadorMayor35);
 
 
-}
+}*/
 
-/** \brief función para validar que lo ingresado sean numeros 
+/** \brief función para validar que lo ingresado sean numeros
   * \param1 recibe un array de char
   * \return true o false (1 o 0)
   *
@@ -291,7 +294,7 @@ int ValidarNumero(char str[])
     return 1;
 }
 
-/** \brief función para validar que lo ingresado sea letras 
+/** \brief función para validar que lo ingresado sea letras
   * \param1 recibe un array de char
   * \return true o false (1 o 0)
   *
@@ -313,7 +316,7 @@ ValidarLetra(char str[])
 
 }
 
-/** \brief función que inicializa los estados en 0 
+/** \brief función que inicializa los estados en 0
   * \param1 recibe un array de la estructura persona
   * \param2 recibe la cantidad definida
   * \return void
@@ -323,10 +326,11 @@ ValidarLetra(char str[])
 void inicilizarArray(Epersona personas[], int cantidad)
 {
     int i;
-
     for(i=0; i<cantidad; i++)
     {
-        personas[i].estado = 0;
+
+        personas[i].estado=0;
+
     }
 
 }

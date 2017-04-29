@@ -11,10 +11,10 @@ typedef struct {
 }Epersona;
 
 
-void altaPersona (Epersona persona[], int);
-void bajaPersona (Epersona persona[], int);
-void imprimirPersonas(Epersona persona[], int);
-void graficarPersona (Epersona persona[], int);
+void altaPersona (Epersona persona[], int cantidad);
+void bajaPersona (Epersona persona[], int cantidad);
+void imprimirPersonas(Epersona persona[], int cantidad);
+void graficarPersona (Epersona persona[], int cantidad);
 int ValidarNumero(char str[]);
 int ValidarLetra(char str[]);
 int validarUnicidad(char str[]);

@@ -8,17 +8,19 @@
 
 int main()
 {
+
     Epersona persona[cantidad];
+    inicilizarArray(persona,cantidad);
 
     char seguir='s';
     int opcion=0;
 
-//    inicilizarArray(persona[cantidad]);
+
 
     while(seguir=='s')
     {
 
-        printf("1- Agregar persona\n");
+        printf("\n1- Agregar persona\n");
         printf("2- Borrar persona\n");
         printf("3- Imprimir lista ordenada por  nombre\n");
         printf("4- Imprimir grafico de edades\n");
@@ -38,8 +40,7 @@ int main()
         switch(opcion)
         {
             case 1:
-          altaPersona(persona, cantidad);
-
+            altaPersona(persona, cantidad);
                 break;
             case 2:
             bajaPersona(persona, cantidad);
@@ -48,7 +49,8 @@ int main()
             imprimirPersonas(persona, cantidad);
                 break;
             case 4:
-            graficarPersona(persona, cantidad);
+            //graficarPersona(persona, cantidad);
+            system("clear");
                 break;
             case 5:
                 seguir = 'n';
